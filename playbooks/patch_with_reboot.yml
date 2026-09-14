@@ -1,0 +1,20 @@
+- hosts: webservers
+  become: yes
+
+  tasks:
+    - name: Atualizar cache
+      apt:
+        update_cache: yes
+
+    - name: Upgrade completo
+      apt:
+        upgrade: dist
+
+    - name: Verificar se precisa reboot
+      stat:
+        path: /var/run/reboot-required
+      register: reboot_required
+
+    - name: Reiniciar servidor se necessário
+      reboot:
+      when: reboot_required.stat.exists

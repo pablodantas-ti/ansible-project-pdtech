@@ -1,0 +1,15 @@
+- hosts: webservers
+  become: yes
+
+  tasks:
+    - name: Atualizar cache
+      apt:
+        update_cache: yes
+
+    - name: Upgrade completo
+      apt:
+        upgrade: dist
+
+    - name: Remover pacotes desnecessários
+      apt:
+        autoremove: yes
