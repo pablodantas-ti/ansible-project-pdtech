@@ -39,8 +39,9 @@ Estrutura baseada em grupos:
 - `web_servers_nginx` → servidores com Nginx
 ---
 ## ▶️ Playbooks
-### 🔹 Instalar Apache
-```bash
+### 
+
+🔹 Instalar Apache
 ansible-playbook playbooks/apache.yml
 🔹 Instalar Nginx
 ansible-playbook playbooks/nginx.yml
