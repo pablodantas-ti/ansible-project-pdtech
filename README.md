@@ -40,7 +40,7 @@ Estrutura baseada em grupos:
 ---
 ## ▶️ Playbooks
 ### 
-
+```bash
 🔹 Instalar Apache
 ansible-playbook playbooks/apache.yml
 🔹 Instalar Nginx
